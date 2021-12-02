@@ -1,0 +1,17 @@
+body {
+  background: url("./background.jpg");
+  background-size: cover;
+}
+
+input[type="file"]::file-selector-button {
+  border: 1px solid #343a40;
+  padding: 0.2em 0.4em;
+  border-radius: 0.2em;
+  background-color: transparent;
+  transition: 0.1s;
+}
+input[type="file"]::file-selector-button:hover {
+  background-color: #343a40;
+  border: 1px solid #343a40;
+  color: white;
+}
