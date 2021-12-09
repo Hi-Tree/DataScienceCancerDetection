@@ -52,6 +52,10 @@ def main():
 
         return (flask.render_template('index.html'))
 
+@app.route('/graphs/')
+def graphs():
+    return flask.render_template('graphs.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
 
