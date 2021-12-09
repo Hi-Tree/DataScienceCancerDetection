@@ -50,39 +50,65 @@
         aria-labelledby="nav-graph-tab"
       ></div>
     </div>
-    <img
-      id="stateCount"
-      src="{{url_for('static', filename='CountByState2.png')}}"
-      alt="Count by state"
-      style="width: 100%; max-width: 300px"
-    />
+    <div class="row">
+      <div class="column">
+        <img
+          id="stateCount"
+          src="{{url_for('static', filename='CountByState2.png')}}"
+          alt="Count by state"
+          style="width: 100%; max-width: 500px; height: 600px"
+        />
+      </div>
+      <div class="column">
+        <video
+          id="stateVideo"
+          width="486"
+          height="252"
+          style="margin-top: 17px"
+          controls
+        >
+          <source
+            src="{{url_for('static', filename='Top20states.mp4')}}"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+
+        <br />
+        <br />
+        <br />
+
+        <video
+          id="raceVideo"
+          width="486"
+          height="252"
+          style="display: flex"
+          controls
+        >
+          <source
+            src="{{url_for('static', filename='byRace.mp4')}}"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <img
+          id="timeCount"
+          src="{{url_for('static', filename='CountoverTime.png')}}"
+          alt="Count over time"
+          style="width: 100%; max-width: 409; height: 279px"
+        />
+      </div>
+    </div>
+    <!--
     <img
       id="countByRace"
       src="{{url_for('static', filename='CountbyRace.png')}}"
       alt="Count by race"
       style="width: 100%; max-width: 300px"
-    />
-    <img
-      id="timeCount"
-      src="{{url_for('static', filename='CountoverTime.png')}}"
-      alt="Count over time"
-      style="width: 100%; max-width: 300px"
-    />
-
-    <video id="raceVideo" width="320" height="240" controls>
-      <source
-        src="{{url_for('static', filename='byRace.mp4')}}"
-        type="video/mp4"
-      />
-      Your browser does not support the video tag.
-    </video>
-
-    <video id="stateVideo" width="320" height="240" controls>
-      <source
-        src="{{url_for('static', filename='Top20states.mp4')}}"
-        type="video/mp4"
-      />
-      Your browser does not support the video tag.
-    </video>
+    /> -->
   </body>
 </html>
