@@ -56,19 +56,20 @@
       ></div>
     </div>
 
-    <form action="{{ url_for('main') }}" method="POST">
+    <form action="{{ url_for('main') }}" method="POST" enctype="multipart/form-data" >
       <fieldset style="padding-left: 35%; margin-top: 15%">
         <legend id="upload">Upload your image here:<br /></legend>
         <input
           type="file"
           id="user_input_image"
-          name="user_input_image"
-          accept="image/jpeg, image/png"
-          required
+          name=user_input_image
+         
         />
         <br /><br />
         <input type="submit" value="Submit" class="btn btn-outline-dark" />
       </fieldset>
     </form>
+    {% if prediction %} <p style = "margin-left: 35%; margin-top: 5%; font-weight: bold; font-size: large;"> Prediction for input image is: {{ prediction }} </p> {% endif %} 
+    {% if percent %} <p style = "margin-left: 35%; font-weight: bold; font-size: large;"> Percent Accuracy is: {{ percent }} % </p> {% endif %} 
   </body>
 </html>
