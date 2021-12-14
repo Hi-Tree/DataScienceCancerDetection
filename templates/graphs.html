@@ -9,6 +9,12 @@
       integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
       crossorigin="anonymous"
     />
+    <style>
+      .row,
+      .column {
+        margin-left: 2%;
+      }
+    </style>
     <title>Data on Cancer</title>
   </head>
   <body style="background-color: #facedf">
@@ -54,19 +60,17 @@
       <div class="column">
         <img
           id="stateCount"
-          src="{{url_for('static', filename='CountByState2.png')}}"
-          alt="Count by state"
-          style="width: 100%; max-width: 500px; height: 600px"
+          src="{{url_for('static', filename='Canceravg5.png')}}"
+          alt="Cancer percent by race by state"
+          style="width: 100%; max-width: 1066px; height: 565px"
         />
       </div>
+    </div>
+    <br />
+    <br />
+    <div class="row">
       <div class="column">
-        <video
-          id="stateVideo"
-          width="486"
-          height="252"
-          style="margin-top: 17px"
-          controls
-        >
+        <video id="stateVideo" width="486" height="252" controls>
           <source
             src="{{url_for('static', filename='Top20states.mp4')}}"
             type="video/mp4"
@@ -77,12 +81,14 @@
         <br />
         <br />
         <br />
+      </div>
 
+      <div class="column">
         <video
           id="raceVideo"
           width="486"
           height="252"
-          style="display: flex"
+          style="margin-left: 10%"
           controls
         >
           <source
@@ -96,10 +102,18 @@
     <div class="row">
       <div class="column">
         <img
+          id="stateCount"
+          src="{{url_for('static', filename='Canceravg3.png')}}"
+          alt="Cancer percent by race"
+          style="width: 100%; max-width: 666px; height: 500px"
+        />
+      </div>
+      <div class="column">
+        <img
           id="timeCount"
           src="{{url_for('static', filename='CountoverTime.png')}}"
           alt="Count over time"
-          style="width: 100%; max-width: 409; height: 279px"
+          style="width: 100%; max-width: 409; height: 279px; margin-top: 30%"
         />
       </div>
     </div>
